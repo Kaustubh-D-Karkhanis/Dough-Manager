@@ -13,3 +13,11 @@ def signup(request):
         form=UserCreationForm()
     return render(request, 'user_management/signup.html', {'form':form})
 
+
+class CustomLoginView(LoginView):
+    template_name = 'user_management/login.html'
+    redirect_authenticated_user=True
+
+    def get_success_url(self):
+        return reverse_lazy('home')
+
