@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import render 
+from .views import landing
 
 def home(request):
     return render(request, 'home.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', landing, name='landing'),
     path('user/', include('user_management.urls')),
-    path('', home, name='home'),
+    path('home/', home, name='home'),
 ]
