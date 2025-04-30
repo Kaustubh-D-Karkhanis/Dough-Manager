@@ -6,7 +6,7 @@ from .forms import UserProfileForm
 @login_required
 def dashboard(request):
     try:
-        profile=request.user.Userprofile
+        profile=request.user.userprofile
     except UserProfile.DoesNotExist:
         return redirect('setup_profile')
     return render(request, 'dashboard/home.html', {'profile':profile})
