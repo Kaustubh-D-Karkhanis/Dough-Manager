@@ -52,7 +52,7 @@
     <div class="col-md-3 col-12 sidebar p-4">
         <h4>Your Stats</h4>
         <div class="stat-item">
-            <strong>Initial Income:</strong><br>
+            <strong>Initial Amount:</strong><br>
             ₹{{ profile.initial_income }}
         </div>
         {% if profile.monthly_budget %}
@@ -63,7 +63,7 @@
         {% endif %}
         {% if profile.income_source %}
         <div class="stat-item">
-            <strong>Income Source:</strong><br>
+            <strong>Income Sources:</strong><br>
             {{ profile.income_source }}
         </div>
         {% endif %}
@@ -71,8 +71,15 @@
 
     <!-- Main Content -->
     <div class="col-md-9 col-12 main-content d-flex flex-column justify-content-center align-items-center px-4 py-5">
-        <h1 class="display-5 welcome-text">Welcome, {{ user.username }}!</h1>
-        <p class="lead text-center">This is your personal dashboard. Expenses and summaries will appear here soon.</p>
+        <div class="d-flex flex-wrap gap-4">
+            <a href="#" class="btn btn-lg btn-outline-danger px-4 py-2 shadow-sm">
+                Add Expense
+            </a>
+            <a href="#" class="btn btn-lg btn-outline-primary px-4 py-2 shadow-sm">
+                Add Investment
+            </a>
+        </div>
+        
     </div>
 </div>
 {% endblock %}

@@ -27,6 +27,5 @@ urlpatterns = [
     path('', landing, name='landing'),
     path('user/', include('user_management.urls')),
     path('home/', home, name='home'),
-    path('', include('dashboard.urls')),
-
+    path('dashboard/', include('dashboard.urls')),
 ]
