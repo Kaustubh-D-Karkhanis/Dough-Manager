@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user_management',
     'dashboard',
+    'widget_tweaks',
 ]
 
 #LOGIN_REDIRECT_URL = '/dashboard/'
